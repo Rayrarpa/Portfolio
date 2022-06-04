@@ -1,0 +1,17 @@
+@use 'variables';
+
+@mixin flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin title-section {
+    color: variables.$text-color;
+    font-size: 5rem;
+    line-height: 6.6rem;
+}
+
+@mixin button-link {
+    
+}

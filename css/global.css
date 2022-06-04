@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #212121;
+  font-family: "Roboto";
+  font-size: 1.6rem;
+}
+body ul, body ol {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #212121;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #CA2424;
+  border-radius: 2rem;
+}
+
+.linha {
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  border-color: #FFF;
+}
+
+::selection {
+  background-color: #aa1414;
+  color: #212121;
+}
+
+/*# sourceMappingURL=global.css.map */

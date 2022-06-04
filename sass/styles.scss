@@ -1,0 +1,306 @@
+@use 'variables';
+@use 'mixins';
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: variables.$header-height;
+
+    margin-bottom: 15rem;
+    padding: 0 7rem;
+
+    background-color: variables.$navbar-bg-color;
+
+    h4 {
+        color: variables.$nav-text-color;
+        font-size: 2.4rem;
+        font-weight: 700;
+        line-height: 3rem;
+    }
+
+    .navbar {
+        &-list {
+            @include mixins.flex;
+
+            gap: 4.5rem;
+
+            
+            li {
+                a {
+                    position: relative;
+                    color: #FFF;
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    padding: .5rem;
+                }
+
+                a::after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: .2rem;
+                    background-color: #FFF;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: transform 0.5s;
+                }
+
+                a:hover::after {
+                    transform: scaleX(95%);
+                }
+            }
+        }
+    }
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &-presentation {
+        color: variables.$text-color;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 5.508rem;
+
+        margin-bottom: 12rem;
+
+        span {
+            font-size: 5.7rem;
+            font-weight: 700;
+            line-height: 7.5rem;
+        }
+    }
+
+    &-social-media {
+        @include mixins.flex;
+
+        justify-content: center;
+        gap: 25.6rem;
+
+        margin-top: 12rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10rem;
+            height: 10rem;
+        }
+
+        li a img {
+            transition: all 1s;
+        }
+
+        li a img:hover {
+            width: 8rem;
+            height: 8rem;
+        }
+    }
+}
+
+.about {
+    @include mixins.flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    padding-top: 5rem;
+
+    &-title {
+        @include mixins.title-section;
+        
+        margin-bottom: 11rem;
+    }
+
+    &-paragraph {
+        font-size: 2.9rem;
+        padding: 0 35.4rem;
+
+        color: variables.$paragraph-color;
+    }
+}
+
+.ability {
+    @include mixins.flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding-top: 5rem;
+
+    &-title {
+        @include mixins.title-section;
+
+        margin-bottom: 6rem;
+    }
+
+    &-div {
+        background-color: variables.$div-color;
+
+        padding: 2.445rem 3.318rem;
+
+        width: 70.9rem;
+
+        border-radius: 5rem;
+
+        .list-ability {
+            @include mixins.flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 3.056rem;
+
+
+            &-itens {
+                @include mixins.flex;
+                justify-content: center;
+
+                width: 19.384rem;
+                height: 17.987rem;
+
+                border-radius: 5rem;
+
+                background-color: variables.$techs-itens-color;
+            }
+        }
+    }
+}
+
+.projects {
+    @include mixins.flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding-top: 5rem;
+    margin-bottom: 5rem;
+
+    &-title {
+        @include mixins.title-section;
+
+        margin-bottom: 11.7rem;
+    }
+    
+    &-list {
+        @include mixins.flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6rem;
+
+        &-itens {
+            width: 59rem;
+            // height: 29rem;
+
+            background-color: variables.$div-color;
+
+            text-align: center;
+
+            padding: 1.8rem 3.7rem;
+
+            img {
+                width: 51.6rem;
+            }
+
+            h4 {
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+
+            hr {
+                margin: 1rem 0;
+            }
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            button {
+                padding: .5rem 3.5rem;
+
+                background-color: variables.$techs-itens-color;
+
+                font-size: 1.7rem;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: variables.$div-color;
+                }
+            }
+        }
+    }
+}
+
+.contact {
+    @include mixins.flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20rem;
+
+    background-color: variables.$navbar-bg-color;
+
+    padding: 5rem 0;
+
+    &-title {
+        @include mixins.title-section;
+        font-size: 6rem;
+        position: relative;
+        bottom: 10rem;
+    }
+
+    &-form {
+        @include mixins.flex;
+        flex-direction: column;
+
+        gap: 2rem;
+
+        color: rgb(212, 0, 0);
+
+        .input {
+            padding: 0.5rem 1rem;
+            background-color: #333333;
+            color: #d4d4d4;
+            border: 0;
+        }
+    }
+}
+
+.btn-top {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    right: 3rem;
+    bottom: 3rem;
+
+    cursor: pointer;
+
+    background-color: variables.$nav-text-color;
+
+    width: 5rem;
+    height: 5rem;
+
+    transform: rotateY(180deg) translateX(-100%);
+    // transform: translateX(100%);
+
+    border: 0;
+    border-radius: 5rem;
+
+    transition: all 1s;
+
+    i {
+        color: #000;
+    }
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transform: rotateY(0deg) translateX(0);
+    // transform: translateX(0);
+}

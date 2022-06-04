@@ -1,0 +1,51 @@
+@use 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: variables.$body-bg-color;
+    font-family: 'Roboto';
+    font-size: 1.6rem;
+    
+    ul, ol {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: .8rem;
+}
+  
+body::-webkit-scrollbar-track {
+    background: variables.$body-bg-color;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: variables.$nav-text-color;
+    border-radius: 2rem;
+}
+
+.linha {
+    margin-top: 15rem;
+    margin-bottom: 5rem;
+
+    border-color: #FFF;
+}
+
+::selection {
+    background-color: variables.$text-color;
+    color: variables.$body-bg-color;
+}
