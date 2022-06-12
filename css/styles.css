@@ -140,10 +140,35 @@ header .navbar-list li a:hover::after {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 19.384rem;
   height: 17.987rem;
   border-radius: 5rem;
   background-color: #444444;
+}
+.ability-div .list-ability-itens::after {
+  content: attr(data-content);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  text-transform: uppercase;
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  color: #ffc2cc;
+  font-size: 3.3rem;
+  font-weight: 700;
+  line-height: 4.7rem;
+  border-radius: 5rem;
+  background-image: linear-gradient(180deg, #CA2424 0%, rgba(68, 68, 68, 0) 100%);
+}
+.ability-div .list-ability-itens:hover::after {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
 }
 
 .projects {
