@@ -104,7 +104,7 @@ header .navbar-list li a:hover::after {
 .about-paragraph {
   font-size: 2.9rem;
   padding: 0 35.4rem;
-  color: #000;
+  color: #d4d4d4;
 }
 
 .ability {
@@ -196,6 +196,7 @@ header .navbar-list li a:hover::after {
 }
 .projects-list-itens {
   width: 59rem;
+  height: 50rem;
   background-color: #323232;
   text-align: center;
   padding: 1.8rem 3.7rem;
@@ -203,24 +204,47 @@ header .navbar-list li a:hover::after {
 .projects-list-itens img {
   width: 51.6rem;
 }
-.projects-list-itens h4 {
+.projects-list-itens .info {
+  margin-top: 2rem;
+  height: 40%;
+  padding: 0 0.8rem;
+  overflow-y: auto;
+  color: #b3b3b3;
+}
+.projects-list-itens .info h4 {
   font-size: 2rem;
   margin-top: 1rem;
+  color: #CA2424;
 }
-.projects-list-itens hr {
+.projects-list-itens .info .techs {
+  font-weight: 700;
+  color: rgb(87, 87, 87);
+  margin-top: 0.5rem;
+}
+.projects-list-itens .info hr {
   margin: 1rem 0;
 }
-.projects-list-itens p {
-  margin-bottom: 1.5rem;
+.projects-list-itens .info p {
+  margin-bottom: 2rem;
 }
-.projects-list-itens button {
+.projects-list-itens .info button {
   padding: 0.5rem 3.5rem;
   background-color: #444444;
   font-size: 1.7rem;
 }
-.projects-list-itens button:hover {
+.projects-list-itens .info button:hover {
   cursor: pointer;
   background-color: #323232;
+}
+.projects-list-itens .info::-webkit-scrollbar {
+  width: 0.8rem;
+}
+.projects-list-itens .info::-webkit-scrollbar-track {
+  background: #212121;
+}
+.projects-list-itens .info::-webkit-scrollbar-thumb {
+  background-color: #CA2424;
+  border-radius: 2rem;
 }
 
 .contact {

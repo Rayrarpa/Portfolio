@@ -233,7 +233,7 @@ header {
 
         &-itens {
             width: 59rem;
-            // height: 29rem;
+            height: 50rem;
 
             background-color: variables.$div-color;
 
@@ -245,29 +245,62 @@ header {
                 width: 51.6rem;
             }
 
-            h4 {
-                font-size: 2rem;
-                margin-top: 1rem;
-            }
+            .info {
+                margin-top: 2rem;
+                height: 40%;
 
-            hr {
-                margin: 1rem 0;
-            }
+                padding: 0 .8rem;
 
-            p {
-                margin-bottom: 1.5rem;
-            }
+                overflow-y: auto;
 
-            button {
-                padding: .5rem 3.5rem;
+                color: #b3b3b3;
 
-                background-color: variables.$techs-itens-color;
+                h4 {
+                    font-size: 2rem;
+                    margin-top: 1rem;
 
-                font-size: 1.7rem;
+                    color: variables.$nav-text-color;
+                }
 
-                &:hover {
-                    cursor: pointer;
-                    background-color: variables.$div-color;
+                .techs {
+                    font-weight: 700;
+                    color: rgb(87, 87, 87);
+
+                    margin-top: .5rem;
+                }
+    
+                hr {
+                    margin: 1rem 0;
+                }
+    
+                p {
+                    margin-bottom: 2rem;
+                }
+    
+                button {
+                    padding: .5rem 3.5rem;
+    
+                    background-color: variables.$techs-itens-color;
+    
+                    font-size: 1.7rem;
+    
+                    &:hover {
+                        cursor: pointer;
+                        background-color: variables.$div-color;
+                    }
+                }
+
+                &::-webkit-scrollbar {
+                    width: .8rem;
+                }
+                  
+                &::-webkit-scrollbar-track {
+                    background: variables.$body-bg-color;
+                }
+                  
+                &::-webkit-scrollbar-thumb {
+                    background-color: variables.$nav-text-color;
+                    border-radius: 2rem;
                 }
             }
         }
@@ -302,7 +335,7 @@ header {
         .input {
             padding: 0.5rem 1rem;
             background-color: #333333;
-            color: #d4d4d4;
+            color: variables.$paragraph-color;
             border: 0;
         }
     }
